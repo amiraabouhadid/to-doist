@@ -130,11 +130,9 @@ export default class Home extends Task {
       incompleteTaskCheck.type = "checkbox";
       incompleteTaskCheck.onclick = (e) => {
         e.preventDefault();
-        if (task.complete === true) {
-          //true
+        if (task.complete) {
           task.complete = false;
         } else {
-          //false
           task.complete = true;
         }
         tasks.map((el, i) => {
